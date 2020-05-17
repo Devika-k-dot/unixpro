@@ -1,20 +1,26 @@
-function guess(){
-    true_ans=$(ls -l |grep "^-"|wc -l)
-    while true;
-    do
-        echo "please guess"
-        read  number
-        if [ $number -lt $true_ans ]
-        then
-            echo " guess is Less"
-        elif [ $number -gt $true_ans ]
-        then
-            echo " guess is Greater r"
-        else
-            echo "congarts u r correct"
-        break;
-        fi
-    done
+function guessing(){
+    true_a=$(ls -l |grep "^-"|wc -l)
+while true
+do
+echo "guess"
+read num
+if [ $num -lt $true_a ]
+then
+echo "guess is less"
+elif [ $num -gt $true_a ]
+then
+echo "guess is greater"
+else
+echo "guess is correct"
+break;
+fi
+done
 }
-echo "guess number of files in directory"
-guess
+echo "guess no of files in current directory"
+guessing
+
+
+
+
+
+
