@@ -7,10 +7,10 @@ read num
 flag=0
 if [ $num -lt $true_a ]
 then
-echo "guess is less"
+echo "guess is less than the no of files in directoryoo"
 elif [ $num -gt $true_a ]
 then
-echo "guess is greater"
+echo "guess is greater than the no of files in directory"
 else
 echo "guess is correct"
 flag=1
