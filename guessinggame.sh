@@ -1,10 +1,10 @@
 function guessing(){
     true_a=$(ls -l |grep "^-"|wc -l)
-while true_a
+    flag=0
+while [ $flag -eq 0 ]
 do
 echo "guess how many files can be inside the directory"
 read num
-flag=0
 if [ $num -lt $true_a ]
 then
 echo "guess is less than the no of files in directoryoo"
